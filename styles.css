@@ -84,6 +84,9 @@ header{
     .nav--container #icon{
         display: block;
     }
+    .scroll-up header {
+        filter: none;
+    }
     .nav--container ul{
         position: fixed;
         width: 100%;
