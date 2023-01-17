@@ -28,3 +28,7 @@ document.getElementById("btn").addEventListener('click',function() {
 document.getElementById("close").addEventListener('click',function() {
     document.querySelector('.container--form').style.display = 'none';
 })
+
+document.getElementById('icon').addEventListener('click', function(){
+    document.querySelector('ul').classList.toggle('show');
+})
