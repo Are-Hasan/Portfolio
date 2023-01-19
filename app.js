@@ -1,6 +1,6 @@
 const body = document.body;
 let lastScroll = 0;
-
+// navbar section
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset
 
@@ -22,16 +22,22 @@ window.addEventListener('scroll', () => {
     lastScroll = currentScroll;
 });
 
-
+// pop-up form
 document.getElementById("btn").addEventListener('click',function() {
     document.querySelector('.container--form').style.display = 'flex';
 })
 document.getElementById("close").addEventListener('click',function() {
     document.querySelector('.container--form').style.display = 'none';
 })
-
-document.getElementById('icon').addEventListener('click', function(){
-    document.querySelector('ul').classList.toggle('show');
+// Mobile Navbar
+let icon = document.getElementById('icon');
+let menu = document.getElementById('menu__links');//UL
+let menuLink = document.getElementsByClassName('menu__link');
+icon.addEventListener('click', () => {
+    menu.classList.toggle('show');
+})
+menu.addEventListener('click', () => {
+    menu.classList.remove('show')
 })
 
 //computer version
@@ -50,7 +56,7 @@ window.addEventListener('scroll', () => {
     let scrollPos = window.scrollY;
     console.log(scrollPos)
     let css = document.getElementById('css');
-    if(window.innerWidth > 960 && scrollPos > 200){
+    if(window.innerWidth > 960 && scrollPos > 210){
         css.classList.add('active')
         return;
     }else{
@@ -62,7 +68,7 @@ window.addEventListener('scroll', () => {
     let scrollPos = window.scrollY;
     // // console.log(scrollPos)
     let js = document.getElementById('js');
-    if(window.innerWidth > 960 && scrollPos > 320){
+    if(window.innerWidth > 960 && scrollPos > 220){
         js.classList.add('is-active')
         return;
     }else{
@@ -74,7 +80,7 @@ window.addEventListener('scroll', () => {
     let scrollPos = window.scrollY;
     // // console.log(scrollPos)
     let git = document.getElementById('git');
-    if(window.innerWidth > 960 && scrollPos > 200){
+    if(window.innerWidth > 960 && scrollPos > 230){
         git.classList.add('active')
         return;
     }else{
